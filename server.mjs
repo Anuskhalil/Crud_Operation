@@ -6,7 +6,7 @@ const app = express(); // it is an handle => app
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  //   console.log("🚀 ~ file: server.mjs:7 ~ app.get ~ req:", req);
+    // console.log("🚀 ~ file: server.mjs:7 ~ app.get ~ req:", req);
   res.send({ message: "Hello World! by Anus Khalil" });
 });
 
@@ -37,7 +37,7 @@ app.get("/myItem/:id", (req, res) => {
 
   let isFound = false;
 
-  for (i = 0; i < myItems.length; i++) {
+  for (let i = 0; i < myItems.length; i++) {
     if (myItems[i].id === req.params.id) {
       isFound = i;
       break;
@@ -78,7 +78,7 @@ app.post("/myItem", (req, res) => {
 
   res.status(201);
   res.send({
-    message: +"Created Item Here",
+    message: "Created Item Here",
   });
 });
 
@@ -97,7 +97,7 @@ app.put("/myItem/:id", (req, res) => {
 
   let isFound = false;
 
-  for (i = 0; i < myItems.length; i++) {
+  for (let i = 0; i < myItems.length; i++) {
     if (myItems[i].id === req.params.id) {
       isFound = i;
       break;
@@ -126,7 +126,7 @@ app.delete("/myItem/:id", (req, res) => {
 
     let isFound = false;
 
-    for (i = 0; i < myItems.length; i++) {
+    for ( let i = 0; i < myItems.length; i++) {
       if (myItems[i].id === req.params.id) {
         isFound = i;
         break;
